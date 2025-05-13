@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 import cvat_sdk.auto_annotation as cvataa
 
-_model = YOLO("chicken.pt")
+_model = YOLO("path-to-your-model")
 
 spec = cvataa.DetectionFunctionSpec(
     labels=[cvataa.label_spec(name, id) for id, name in _model.names.items()],
